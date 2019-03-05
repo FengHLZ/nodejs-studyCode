@@ -24,7 +24,9 @@ file.readFile('../testfile.txt', function(error, data){
 	// console.log(data)
 	// 结果为：<Buffer c4 e3 ba c3 a3 ac 6e 6f 64 65 6a 73>
 	// 二进制数据，通过toSring方法转换
-
-	console.log(data.toString())
-
+	if (error) {
+		console.log("文件打开失败")
+	}else{
+		console.log(data.toString())
+	}
 })
